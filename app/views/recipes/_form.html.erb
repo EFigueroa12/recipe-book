@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag "form" %>
+<div class="recipe-entry-container">
+<%= form_with model: recipe do |form| %>
+    <div class="recipe-entry">
+        <%= form.label :name %>
+        <%= form.text_field :name, required: true, placeholder:"Enter Recipe Name", class:"form-control"%>
+    </div>
+    <div class="scroll-inputs">
+        <div class="recipe-entry">
+            <%= form.label :prep_time %>
+            <%= form.number_field :prep_time, min:1, step:1, value:5, class:"form-control" %>
+        </div>
+        <div class="recipe-entry">
+            <%= form.label :cook_time %>
+            <%= form.number_field :cook_time, min:1, step:1, value:2, class:"form-control" %>
+        </div>
+        <div class="recipe-entry">
+            <%= form.label :servings %>
+            <%= form.number_field :servings, min:1, max: 200, step:1, value:1, class:"form-control" %>
+        </div>
+    </div>
+    <div class="drop-inputs">
+        <div class="recipe-entry">
+            <%= form.label :Difficulty %>
+            <%= form.select :difficulty, options_for_select(['easy', 'medium', 'hard']), prompt: "Select difficulty", class:"form-control" %>
+        </div>
+        <div class="recipe-entry">
+            <%= form.label :category %>
+            <%= form.select :category, options_for_select([ 'Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Snack', 'None Apply']), class:"form-control" %>
+        </div>
+        <div class="recipe-entry">
+        <%= form.label :cuisine_type %>
+        <%= form.text_field :cuisine_type, placeholder:"Input Cuisine Type", class:"form-control" %>
+    </div>
+    </div>
+    <div class="recipe-entry">
+        <div class="instructions">
+        <%= form.label :instructions %>
+        <%= form.text_field :instructions, placeholder: "Enter Recipe Instructions", class:"form-control-instructions" %>
+        </div>
+    </div>
+    <div class="recipe-submit">
+        <%= form.submit %>
+    </div>
+<% end %>
+</div>

@@ -1,0 +1,18 @@
+<div class="recipe">
+    <h2><%= @recipe.name %></h2>
+    <h3> Servings: <%=@recipe.servings %> </h3>
+    <h3> Cook Time: <%=@recipe.cook_time %> </h3>
+    <h3> Prep Time: <%=@recipe.prep_time %> </h3>
+    <h3> difficulty: <%=@recipe.difficulty %> </h3>
+    <h3> cuisine_type: <%=@recipe.cuisine_type %> </h3>
+    <h3> category: <%=@recipe.category %> </h3>
+    <h3> instructions: <%=@recipe.instructions %> </h3>
+    <h3> Recipe Author: <%=@recipe.user.email %> </h3>
+    <div class="btn-options">
+        <%= link_to "Back", recipes_path, class:'std-btn' %>
+        <% if @recipe.user == current_user %>
+            <%= link_to "Edit", edit_recipe_path(@recipe), class:'new-btn' %>
+            <%= button_to "Delete", @recipe, method: :delete, data: {turbo_confirm: "Are you sure"}, class:'cancel-btn' %>
+        <% end %>
+    </div>
+</div>

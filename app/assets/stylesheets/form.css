@@ -1,0 +1,120 @@
+.recipe-entry-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 42%;
+    color: rgba(255, 255, 255, 0.829);
+}
+
+.scroll-inputs, .drop-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recipe-entry{
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border: 4px solid rgb(98, 82, 244);
+    border-radius: 2rem;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(66, 55, 220);
+    color: rgba(255, 255, 255, 0.829);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.recipe-entry:hover, .recipe-submit:hover, .cancel-btn:hover, .std-btn:hover{
+    transform: translateY(-0.5rem);
+}
+input[type="submit"], .new-btn {
+    width: fit-content;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 4px solid rgb(57, 120, 76);
+    background-color: rgb(58, 138, 81);
+    color: rgba(255, 255, 255, 0.941);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    /* margin-left: 40%; */
+}
+.cancel-btn{
+    width: fit-content;
+    margin-top: 1rem;
+    border: 4px solid rgb(187, 68, 50);
+    border-radius: 2rem;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(236, 52, 52);
+    color: rgba(255, 255, 255, 0.941);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    /* margin-left: 45%; */
+}
+.std-btn{
+    width: fit-content;
+    margin-top: 1rem;
+    border: 4px solid rgb(95, 89, 162);
+    border-radius: 2rem;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(143, 156, 255);
+    color: rgba(255, 255, 255, 0.941);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    /* margin-left: 45%; */
+    text-decoration: none;
+}
+.form-control{
+    border-radius: 8px;
+    border: 3px solid rgb(98, 82, 244);
+    padding: 5px;
+    color: rgba(32, 36, 95, 0.829);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+.form-control-instructions{
+    width: 400px;
+    height: 150px;
+    border-radius: 8px;
+    border: 3px solid rgb(98, 82, 244);
+    padding: 10px;
+    color: rgba(32, 36, 95, 0.829);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+.instructions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

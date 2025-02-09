@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag "home" %>
+<h1>Recipes</h1>
+<%= link_to "Create New Recipe", new_recipe_path, class:'new-btn' %>
+<div class="recipes">
+    <% @recipes.each do |recipe| %>
+        <div>
+            <%= link_to recipe.name, recipe, class:'recipe-entry' %>
+        </div>
+    <% end %>
+</div>
