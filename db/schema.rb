@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_07_234121) do
+ActiveRecord::Schema[7.0].define(version: 2025_02_22_234912) do
+  create_table "comments", force: :cascade do |t|
+    t.text "context", null: false
+    t.integer "parent_id"
+    t.integer "recipe_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parent_id"], name: "index_comments_on_parent_id"
+    t.index ["recipe_id"], name: "index_comments_on_recipe_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "recipes", force: :cascade do |t|
     t.string "name"
     t.integer "prep_time"
@@ -38,5 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_07_234121) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "recipes"
+  add_foreign_key "comments", "users"
   add_foreign_key "recipes", "users"
 end

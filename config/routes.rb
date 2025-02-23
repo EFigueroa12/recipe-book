@@ -10,5 +10,7 @@ Rails.application.routes.draw do
     root to: 'recipes#index', as: :authenticated_root
   end
 
-  resources :recipes
+  resources :recipes do
+    resources :comments, only: [:create]
+  end
 end

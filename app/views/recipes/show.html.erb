@@ -15,4 +15,9 @@
             <%= button_to "Delete", @recipe, method: :delete, data: {turbo_confirm: "Are you sure"}, class:'cancel-btn' %>
         <% end %>
     </div>
+    <p>
+        <strong> Comments </strong>
+        <%= render @recipe.comments%>
+        <%= render partial: 'comments/form', locals: {recipe: @recipe}%>
+    </p>
 </div>
