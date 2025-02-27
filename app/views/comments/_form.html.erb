@@ -1,4 +1,5 @@
-<p> hi</p>
-<form>
-
+<form action="<%= recipe_comments_path(recipe) %>" method="post">
+    <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+    <textarea name= "comment[context]" cols="20" rows="6"> </textarea>
+    <input type="Submit" value="Submit">
 </form>
